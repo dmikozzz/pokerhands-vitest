@@ -1,0 +1,16 @@
+{
+  "name": "pokerhands-vite-test-start",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "vitest": "^2.1.2"
+  }
+}
