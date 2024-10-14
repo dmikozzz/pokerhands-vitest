@@ -10,7 +10,10 @@
   "author": "",
   "license": "ISC",
   "description": "",
-  "dependencies": {
+  "directories": {
+    "test": "tests"
+  },
+  "devDependencies": {
     "vitest": "^2.1.2"
   }
 }
