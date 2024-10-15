@@ -39,6 +39,25 @@ export default class CompareHands {
     return this.isStraight(hand) && this.isFlush(hand);
   }
 
+  static isFlush(hand) {
+    let suits = [];
+    for (let card of hand.cards) {
+      suits.push(card.suit);
+    }
+    // not a flush -> 0
+    if ([...new Set(suits)].length !== 1) {
+      return 0;
+    }
+    // return points depending of strength of flush
+    this.sortByRank(hand);
+    let score = 0, counter = 0;
+    for (let card of hand.cards) {
+      score += this.rankToPoint(card.rank) * 10 ** counter;
+      counter += 2;
+    }
+    return score;
+  }
+  
   static isFourOfAKind(hand) {
     // Create counter for each rank
     let rankCounts = {};
